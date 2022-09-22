@@ -12,6 +12,10 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("hello")) {
             return "Hello there, beautiful day we are having isn't it?";
         }
+
+        if (query.toLowerCase().contains("name")) {
+            return "curry";
+        }
         return "";
     }
 }
