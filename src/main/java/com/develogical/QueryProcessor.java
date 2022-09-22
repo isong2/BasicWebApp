@@ -28,9 +28,10 @@ public class QueryProcessor {
                 String potentialNum = splitquery[i];
                 if (potentialNum.contains(",")) {
                     potentialNum = potentialNum.substring(0, potentialNum.length() - 1);
+                    numList.add(convertingStringNumbersToIntegers(potentialNum));
                 }
-                numList.add(convertingStringNumbersToIntegers(potentialNum));
             }
+            numList.add(convertingStringNumbersToIntegers(splitquery[splitquery.length - 1]));
             List<Integer> sortedlist = new ArrayList<>(numList);
             Collections.sort(sortedlist);
             return sortedlist.get(sortedlist.size() - 1).toString();
